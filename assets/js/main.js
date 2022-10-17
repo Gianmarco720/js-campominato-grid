@@ -7,7 +7,7 @@ ed emetto un messaggio in console con il numero della cella cliccata.
 */
 
 // seleziono il container e il bottone con queryselector
-const container = document.querySelector('.container');
+const container = document.querySelector('.my_container');
 const gameBtn = document.querySelector('.start_game');
 
 // creo l'elemento da inserire nella DOM

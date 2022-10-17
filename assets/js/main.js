@@ -16,8 +16,13 @@ let cellsNum = 100;
 
 // aggiungo un eventlistener per creare la griglia al click del bottone
 gameBtn.addEventListener('click', function() {
-    // creo la griglia con un ciclo for
-    for (let i = 0; i < cellsNum; i++) {
-        container.innerHTML += cells;
-    }
+    // invoco la funzione per la griglia
+    gridGen(100, container);
 })
+
+// creo una funzione per generare le griglia
+function gridGen(num, domEl) {
+    for (let i = 0; i < num; i++) {
+        domEl.innerHTML += cells;
+    }
+}

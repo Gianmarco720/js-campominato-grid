@@ -9,6 +9,8 @@ ed emetto un messaggio in console con il numero della cella cliccata.
 // seleziono gli elementi della DOM con queryselector
 const container = document.querySelector('.my_container');
 const gameBtn = document.querySelector('.start_game');
+const cell = document.querySelector('.cell');
+
 
 // dichiaro una variabile per il numero delle celle
 let cellsNum = 100;
@@ -17,8 +19,12 @@ let cellsNum = 100;
 gameBtn.addEventListener('click', function() {
     // invoco la funzione per la griglia
     gridGen(100, container);
-    
-    
+
+
+})
+
+cell.addEventListener('click', function() {
+    console.log('Ho cliccato la casella');
 })
 
 // FUNCTIONS

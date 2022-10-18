@@ -29,11 +29,12 @@ function gridGen(num, domEl) {
         let cell = document.createElement("div");
         cell.classList.add("cell");
         domEl.appendChild(cell);
-        cell.innerHTML += [i]
+        cell.innerHTML += [i];
 
         // aggiungo un eventlistener per colorare le celle
         cell.addEventListener("click", function () {
             this.classList.toggle("active");
+            console.log(`Hai cliccato sulla casella ${i}`);
         })
     }
 }

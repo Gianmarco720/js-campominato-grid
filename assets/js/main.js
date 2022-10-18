@@ -26,11 +26,13 @@ gameBtn.addEventListener('click', function () {
 // funzione per generare le griglia
 function gridGen(num, domEl) {
     for (let i = 1; i <= num; i++) {
-        let square = document.createElement("div");
-        square.classList.add("cell");
-        domEl.appendChild(square);
-        square.innerHTML += [i]
-        square.addEventListener("click", function () {
+        let cell = document.createElement("div");
+        cell.classList.add("cell");
+        domEl.appendChild(cell);
+        cell.innerHTML += [i]
+
+        // aggiungo un eventlistener per colorare le celle
+        cell.addEventListener("click", function () {
             this.classList.toggle("active");
         })
     }
